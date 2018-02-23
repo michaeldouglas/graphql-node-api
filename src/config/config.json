@@ -1,14 +1,14 @@
 {
   "development": {
-    "username": "michael.douglas",
-    "password": "Mdba2007!",
+    "username": "root",
+    "password": "Atit2017!#",
     "database": "estudos",
     "host": "homologacao.com.br",
     "dialect": "mysql"
   },
   "test": {
-    "username": "michael.douglas",
-    "password": "Mdba2007!",
+    "username": "root",
+    "password": "Atit2017!#",
     "database": "database_tests",
     "host": "homologacao.com.br",
     "dialect": "mysql"

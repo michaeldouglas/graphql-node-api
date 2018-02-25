@@ -1,0 +1,13 @@
+version: '2'
+services:
+  # MySQL (5.7)
+  db:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    container_name: graph-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=graph
+      - MYSQL_DATABASE=graph
+      - MYSQL_USER=graph
+      - MYSQL_PASSWORD=graph

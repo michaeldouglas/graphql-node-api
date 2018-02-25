@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "Atit2017!#",
-    "database": "estudos",
-    "host": "homologacao.com.br",
+    "username": "graph",
+    "password": "graph",
+    "database": "graph",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {

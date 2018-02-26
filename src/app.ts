@@ -2,9 +2,9 @@ import * as express      from 'express'
 import * as graphqlHTTP  from 'express-graphql'
 import      db           from './models'
 import      schema       from './graphql/schema'
-import { pusherTrigger } from './utils/pusher'
+//import { pusherTrigger } from './utils/pusher'
 
-pusherTrigger('my-channel', 'my-event')
+//pusherTrigger('my-channel', 'my-event')
 
 class App {
     

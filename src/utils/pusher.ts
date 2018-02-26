@@ -21,14 +21,14 @@ const socket = new PusherJS(PUSHER_APP_KEY, {
     console.log(msg);
 };*/
 
-const channel = socket.subscribe('my-channel');
+//const channel = socket.subscribe('my-channel');
 
-export const pusherTrigger = (): void => {
-    pusher.trigger('my-channel', 'my-event', {
+export const pusherTrigger = (channelClient: string, eventClient: string): Pusher => {
+    pusher.trigger(channelClient, eventClient, {
         "message": "hello world"
     }) 
 
-    channel.bind('my-event', function (data) {
+    /*channel.bind('my-event', function (data) {
         console.log(`AQUI - ${data.message}`);
-    })
+    })*/
 }

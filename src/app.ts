@@ -1,10 +1,10 @@
-import * as express     from 'express'
-import * as graphqlHTTP from 'express-graphql'
-import      db          from './models'
-import      schema      from './graphql/schema'
+import * as express      from 'express'
+import * as graphqlHTTP  from 'express-graphql'
+import      db           from './models'
+import      schema       from './graphql/schema'
 import { pusherTrigger } from './utils/pusher'
 
-pusherTrigger('teste', 'teste')
+pusherTrigger('my-channel', 'my-event')
 
 class App {
     

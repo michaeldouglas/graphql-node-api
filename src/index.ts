@@ -3,12 +3,12 @@ import 'dotenv/config'
 
 import app from './app'
 import db from './models'
-import { normalizePort, onError, onListening } from './utils/utils';
+import { normalizePort, onError, onListening } from './library/Server/server';
 
 
 const server = http.createServer(app)
 const port   = normalizePort(process.env.PORT || 3000)
-
+ 
 db.sequelize.sync()
     .then(() => {
         server.listen(port)

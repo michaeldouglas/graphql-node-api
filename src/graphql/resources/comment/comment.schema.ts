@@ -1,5 +1,5 @@
 const commentTypes = `
-   type Comment {
+    type Comment {
        id: ID!,
        comment: String!,
        createdAt: String!,
@@ -16,7 +16,7 @@ const commentTypes = `
 `
 
 const commentQueries = `
-    commentsByPost(post: ID!, first: Int, offset: Int): [ Comment! ]!
+    commentsByPost(postId: ID!, first: Int, offset: Int): [ Comment! ]!
 `
 
 const commentMutations = `

@@ -11,6 +11,11 @@ const userTypes = `
         posts(first: Int, offset: Int): [ Post! ]!
     }
 
+    type RequestUsers {
+       rows: [ User! ]!
+       total: Int
+    }
+
     input UserCreateInput {
         name: String!
         email: String!
@@ -26,22 +31,18 @@ const userTypes = `
     input UserUpdatePasswordInput {
         password: String!
     }
-`
+`;
 
 const userQueries = `
-    users(first: Int, offset: Int): [ User! ]!
+    users(first: Int, offset: Int): [ RequestUsers! ]!
     user(id: ID!): User
-`
+`;
 
 const UserMutations = `
     createUser(input: UserCreateInput!): User
     updateUser(id: ID!, input: UserUpdateInput!): User
     updateUserPassword(id: ID!, input: UserUpdatePasswordInput!): Boolean
     deleteUser(id: ID!): Boolean
-`
+`;
 
-export {
-    userTypes,
-    userQueries,
-    UserMutations
-}
+export { userTypes, userQueries, UserMutations };

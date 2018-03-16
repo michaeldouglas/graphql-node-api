@@ -2,6 +2,7 @@ import { PusherInterface } from './../../../interfaces/PusherInterface';
 import { handleError } from './../../../library/Server/server';
 import { GraphQLResolveInfo } from 'graphql';
 import { Transaction } from 'sequelize';
+import * as Sequelize from 'sequelize';
 
 import { DbConnection } from './../../../interfaces/DbConnectionInterface';
 
@@ -50,6 +51,7 @@ export const userResolvers = {
             .findAll({
               limit: first,
               offset: offset,
+              order: Sequelize.literal('id, name ASC'),
             })
             .then(data => {
               return [
